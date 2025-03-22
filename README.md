@@ -85,7 +85,7 @@ graph TD
     
     subgraph Security Layer
         F
-        K[Azure Key Vault]
+        K[Azure APP ENV Vault]
     end
     
     C --> K
@@ -133,7 +133,7 @@ graph TD
   - Role-based access control
   - Single sign-on capabilities
 
-- **Azure Key Vault**
+- **Azure APP ENV **
   - Secret management
   - Certificate storage
   - Encryption key management
@@ -172,7 +172,7 @@ graph TD
 graph TD
     A[User Request] --> B[Azure Front Door/WAF]
     B --> C[Azure Entra B2C]
-    C --> D[Azure Key Vault]
+    C --> D[Azure APP ENV ]
     D --> E[Application Layer]
     E --> F[Data Layer]
     
