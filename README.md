@@ -62,7 +62,176 @@ AI Architecture Assistant is a groundbreaking solution developed for the Azure A
 | 🚀 Deployment | 60% Faster |
 
 </div>
+## 🏗️ System Architecture
 
+### High-Level Architecture
+```mermaid
+graph TD
+    A[Client Application] --> B[Azure Front Door]
+    B --> C[Azure Web App]
+    C --> D[Azure OpenAI Service]
+    C --> E[Azure AI Foundry]
+    C --> F[Azure Entra B2C]
+    C --> G[Azure Monitor]
+    C --> H[Application Insights]
+    
+    subgraph Data Layer
+        I[Azure SQL Database]
+        J[Azure Storage]
+    end
+    
+    C --> I
+    C --> J
+    
+    subgraph Security Layer
+        F
+        K[Azure Key Vault]
+    end
+    
+    C --> K
+```
+
+### Component Details
+
+#### 1. Frontend Layer
+- **Client Application**
+  - React 18.3 with TypeScript
+  - Three.js for 3D visualization
+  - Real-time architecture diagrams
+  - Interactive user interface
+  - Progressive Web App capabilities
+
+- **Azure Front Door**
+  - Global load balancing
+  - SSL termination
+  - DDoS protection
+  - Web Application Firewall
+
+#### 2. Application Layer
+- **Azure Web App**
+  - Node.js runtime
+  - Auto-scaling enabled
+  - Deployment slots for zero-downtime updates
+  - Integrated with CI/CD pipeline
+
+- **Azure OpenAI Service**
+  - GPT-4 model integration
+  - Natural language processing
+  - Context-aware responses
+  - Architecture pattern recognition
+
+- **Azure AI Foundry**
+  - Custom model development
+  - MLOps automation
+  - Model deployment optimization
+  - Performance monitoring
+
+#### 3. Security Layer
+- **Azure Entra B2C**
+  - Identity management
+  - Multi-factor authentication
+  - Role-based access control
+  - Single sign-on capabilities
+
+- **Azure Key Vault**
+  - Secret management
+  - Certificate storage
+  - Encryption key management
+  - Secure configuration storage
+
+#### 4. Data Layer
+- **Azure SQL Database**
+  - User data storage
+  - Architecture metadata
+  - Audit logging
+  - Automated backups
+  - Geo-replication
+
+- **Azure Storage**
+  - Architecture diagrams
+  - Generated artifacts
+  - Blob storage for assets
+  - Queue storage for background jobs
+
+#### 5. Monitoring & Analytics
+- **Application Insights**
+  - Real-time monitoring
+  - Performance metrics
+  - User behavior analytics
+  - Custom event tracking
+
+- **Azure Monitor**
+  - Resource health monitoring
+  - Alert management
+  - Log analytics
+  - Diagnostic settings
+
+### Security Architecture
+
+```mermaid
+graph TD
+    A[User Request] --> B[Azure Front Door/WAF]
+    B --> C[Azure Entra B2C]
+    C --> D[Azure Key Vault]
+    D --> E[Application Layer]
+    E --> F[Data Layer]
+    
+    subgraph Security Controls
+        G[Identity Protection]
+        H[DDoS Protection]
+        I[Encryption at Rest]
+        J[Encryption in Transit]
+        K[Network Security]
+    end
+```
+
+### Data Flow
+
+1. **User Request Flow**
+   - Request reaches Azure Front Door
+   - WAF policies applied
+   - Authentication via Azure B2C
+   - Route to nearest web app instance
+
+2. **Processing Flow**
+   - Web app processes request
+   - OpenAI service generates recommendations
+   - AI Foundry provides accelerators
+   - Results stored in database
+
+3. **Response Flow**
+   - Processed results returned
+   - Real-time updates via WebSocket
+   - Metrics logged to Application Insights
+   - Response cached when applicable
+
+### Scalability Features
+
+- **Horizontal Scaling**
+  - Auto-scaling web apps
+  - Load-balanced distribution
+  - Multi-region deployment
+  - Database scaling
+
+- **Performance Optimization**
+  - CDN integration
+  - Caching strategies
+  - Resource optimization
+  - Query optimization
+
+### Disaster Recovery
+
+- **High Availability**
+  - Active-active deployment
+  - Geo-redundant storage
+  - Automated failover
+  - Data replication
+
+- **Backup Strategy**
+  - Automated backups
+  - Point-in-time recovery
+  - Geo-redundant backup
+  - Regular testing
 ## 🎨 Technical Stack
 
 ### Frontend Technologies
