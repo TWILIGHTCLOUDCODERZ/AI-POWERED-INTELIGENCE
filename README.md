@@ -11,7 +11,7 @@
   <p align="center" class="text-xl text-gray-400 mt-4">Transform cloud architecture design with AI-powered intelligence</p>
 
   <div class="flex justify-center space-x-4 mt-6">
-    <a href="https://www.youtube.com/watch?v=6kldr_9t9pE" target="_blank">
+    <a href="https://www.youtube.com/watch?v=qQ1ebbwybVA&t=3s" target="_blank">
       <img src="https://img.shields.io/badge/Watch_Demo-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Demo" />
     </a>
     <a href="https://azureaideveloperhackathon.azurewebsites.net/" target="_blank">
